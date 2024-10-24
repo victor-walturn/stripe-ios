@@ -29,10 +29,14 @@ internal protocol HCaptchaURLOpener {
  * UIApplication based implementation
  */
 internal class HCapchaAppURLOpener: HCaptchaURLOpener {
+    @available(iOSApplicationExtension, unavailable)
+    @available(macCatalystApplicationExtension, unavailable)
     func canOpenURL(_ url: URL) -> Bool {
         return UIApplication.shared.canOpenURL(url)
     }
 
+    @available(iOSApplicationExtension, unavailable)
+    @available(macCatalystApplicationExtension, unavailable)
     func openURL(_ url: URL) {
         UIApplication.shared.open(url, options: [:], completionHandler: nil)
     }
