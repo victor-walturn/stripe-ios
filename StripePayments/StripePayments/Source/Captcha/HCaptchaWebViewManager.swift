@@ -307,6 +307,8 @@ fileprivate extension HCaptchaWebViewManager {
 
      Adds the webview to a valid UIView and loads the initial HTML file
      */
+    @available(iOSApplicationExtension, unavailable)
+    @available(macCatalystApplicationExtension, unavailable)
     func setupWebview(html: String, url: URL) {
         #if os(visionOS)
         let windows = UIApplication.shared.connectedScenes
